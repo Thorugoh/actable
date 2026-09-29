@@ -1,5 +1,4 @@
 node_modules/
-.todo/
 .expo/
 dist/
 *.log
