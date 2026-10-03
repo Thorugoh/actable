@@ -1,4 +1,4 @@
-import type { Runtime } from '@agentic/core';
+import type { Runtime } from '@actable/core';
 import { isRequest, notification, parseMessage } from '../protocol/json-rpc';
 import { EVENT_METHOD, HELLO_METHOD } from '../protocol/bridge-protocol';
 import { forwardEvents } from './forward-events';

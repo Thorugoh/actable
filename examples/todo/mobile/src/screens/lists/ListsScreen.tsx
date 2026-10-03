@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
-import { useViewModel } from '@agentic/react-native';
+import { useViewModel } from '@actable/react-native';
 import type { ListsViewModel } from '@todo/domain';
 import { TextEntry } from '../../components/TextEntry';
 import { sharedStyles } from '../../components/shared-styles';

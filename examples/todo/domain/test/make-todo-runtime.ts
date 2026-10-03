@@ -1,4 +1,4 @@
-import { createRuntime, fixedClock, freshState, memoryStorage, sequentialIds, type DispatchResult, type Ports } from '@agentic/core';
+import { createRuntime, fixedClock, freshState, memoryStorage, sequentialIds, type DispatchResult, type Ports } from '@actable/core';
 import { todoApp, todoFixtures } from '../src';
 
 export async function makeTodoRuntime(fixture: keyof typeof todoFixtures = 'demo', ports: Partial<Ports> = {}) {

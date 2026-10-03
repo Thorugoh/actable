@@ -1,6 +1,6 @@
 import type { Command } from 'commander';
-import { DEFAULT_RELAY_PORT } from '@agentic/bridge';
-import { startRelay, type RelayLogEvent } from '@agentic/node';
+import { DEFAULT_RELAY_PORT } from '@actable/bridge';
+import { startRelay, type RelayLogEvent } from '@actable/node';
 import { globalOptionsOf } from '../global-options';
 import { formatEvent } from '../output/format-event';
 import type { Session } from '../session';

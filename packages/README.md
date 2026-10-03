@@ -1,4 +1,4 @@
-# @agentic packages
+# Actable packages
 
 ## What it is
 
@@ -22,13 +22,13 @@ A small set of TypeScript packages for building React Native apps that **people 
 
 | Package | Runs in | Role |
 |---|---|---|
-| `@agentic/core` | anywhere | The runtime. Your app is defined with it |
-| `@agentic/bridge` | anywhere | Protocol for remote mode (app ⇄ relay ⇄ client) |
-| `@agentic/node` | Node | File storage, ids, and the relay server |
-| `@agentic/cli` | Node | A full CLI for your app, from one config object |
-| `@agentic/react-native` | React Native | Renders the runtime: provider, hooks, navigation, approvals |
+| `@actable/core` | anywhere | The runtime. Your app is defined with it |
+| `@actable/bridge` | anywhere | Protocol for remote mode (app ⇄ relay ⇄ client) |
+| `@actable/node` | Node | File storage, ids, and the relay server |
+| `@actable/cli` | Node | A full CLI for your app, from one config object |
+| `@actable/react-native` | React Native | Renders the runtime: provider, hooks, navigation, approvals |
 
-### `@agentic/core`
+### `@actable/core`
 
 Defines and runs an app. It is platform-free.
 
@@ -47,7 +47,7 @@ Defines and runs an app. It is platform-free.
 - **Scenarios:** JSONL flows with `run` and `expect` steps, `$references`, and delays.
 - **Ports and adapters:** `Storage`, `Clock`, `IdGenerator` and `Confirmer`, plus memory, fixed-clock, sequential-id and `withMigration` adapters.
 
-### `@agentic/bridge`
+### `@actable/bridge`
 
 Connects a running app to tools outside it. It is platform-free.
 
@@ -56,7 +56,7 @@ Connects a running app to tools outside it. It is platform-free.
 - **`startAppBridge(runtime, options)`** runs inside the app, serves its actions and streams events. It reconnects on its own.
 - **`connectRelay(url)`** is the client used by the CLI (and MCP). It provides `dispatch`, `inspect`, `describeActions`, `screenshot`, `devices` and `onEvent`.
 
-### `@agentic/node`
+### `@actable/node`
 
 Node-side pieces.
 
@@ -70,7 +70,7 @@ Node-side pieces.
   - fails pending calls cleanly when an app disconnects
   - fans events out to subscribers
 
-### `@agentic/cli`
+### `@actable/cli`
 
 Gives any app a complete CLI.
 
@@ -92,7 +92,7 @@ process.exitCode = await runCli({ name: 'myapp', app: myApp }, process.argv.slic
 - `--remote` and `--device`, to target the live app instead of a local runtime
 - `--relay` and `--token`
 
-### `@agentic/react-native`
+### `@actable/react-native`
 
 Renders the runtime in React Native. The UI holds no logic.
 
@@ -105,29 +105,29 @@ Renders the runtime in React Native. The UI holds no logic.
 - **`useNavigationSync(ref)`** syncs React Navigation with the runtime's stack in both directions, including native back gestures.
 - **`createConfirmationQueue()`** implements agent approvals for your own sheet UI.
 - **`useDevBridge(runtime, { name })`** is remote mode for development builds.
-- **`@agentic/react-native/expo`** provides `expoSqliteStorage(key)` and `expoRandomIds()`.
+- **`@actable/react-native/expo`** provides `expoSqliteStorage(key)` and `expoRandomIds()`.
 
 ## How they work together
 
 ```
                         your app's domain  (defineApp: data, actions, screens)
                                   │
-                           @agentic/core  ──  runtime.dispatch(action, input, { origin })
+                           @actable/core  ──  runtime.dispatch(action, input, { origin })
              ┌────────────────────┼─────────────────────────────┐
              │                    │                             │
- @agentic/react-native     @agentic/cli (local)          @agentic/bridge (app host)
+ @actable/react-native     @actable/cli (local)          @actable/bridge (app host)
    UI taps → dispatch       run / inspect / scenarios       inside the running app
    view models → screens    in Node, in milliseconds               │  WebSocket
                                                                    ▼
-                                                        @agentic/node relay  (`serve`)
+                                                        @actable/node relay  (`serve`)
                                                                    ▲
                                                                    │
-                                              @agentic/cli --remote,  MCP (next)
+                                              @actable/cli --remote,  MCP (next)
 ```
 
-- **The domain is written once** against `@agentic/core` and has no platform code.
-- **On the phone,** `@agentic/react-native` creates the runtime with Expo ports and renders its view models.
-- **In the terminal,** `@agentic/cli` creates the same runtime with Node ports (`@agentic/node`). It runs in milliseconds and needs no device.
+- **The domain is written once** against `@actable/core` and has no platform code.
+- **On the phone,** `@actable/react-native` creates the runtime with Expo ports and renders its view models.
+- **In the terminal,** `@actable/cli` creates the same runtime with Node ports (`@actable/node`). It runs in milliseconds and needs no device.
 - **In remote mode,** the app's bridge connects to the relay (`serve`). `--remote` sends the same commands to the live app, and the UI updates as they run. If an agent asks for something destructive, the phone shows Approve/Decline.
 
 ## Add it to a new React Native app
@@ -138,8 +138,8 @@ Renders the runtime in React Native. The UI holds no logic.
 npx create-expo-app@latest my-app --template blank-typescript
 npx expo install @react-navigation/native @react-navigation/native-stack react-native-screens \
   react-native-safe-area-context expo-sqlite expo-crypto
-npm install @agentic/core @agentic/react-native zod
-npm install -D @agentic/cli tsx
+npm install @actable/core @actable/react-native zod
+npm install -D @actable/cli tsx
 ```
 
 The packages aren't published to npm yet. Until they are, add your app to this monorepo as a workspace (with dependencies set to `"*"`), or link them with `npm link`.
@@ -235,7 +235,7 @@ export function HomeScreen() {
 
 ```ts
 // cli/main.ts
-import { processIO, runCli } from '@agentic/cli';
+import { processIO, runCli } from '@actable/cli';
 import { notesApp } from '../domain/notes-app';
 
 process.exitCode = await runCli({ name: 'notes', app: notesApp }, process.argv.slice(2), processIO());

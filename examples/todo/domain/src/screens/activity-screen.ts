@@ -1,4 +1,4 @@
-import { allowIf, describeJournal } from '@agentic/core';
+import { allowIf, describeJournal } from '@actable/core';
 import { defineScreen } from '../kit';
 
 export const activityScreen = defineScreen({

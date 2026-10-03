@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState, type ReactNode } from 'react';
-import { createRuntime, type AnyAppDefinition, type Policy, type Ports, type Runtime } from '@agentic/core';
+import { createRuntime, type AnyAppDefinition, type Policy, type Ports, type Runtime } from '@actable/core';
 
 export const RuntimeContext = createContext<Runtime | null>(null);
 

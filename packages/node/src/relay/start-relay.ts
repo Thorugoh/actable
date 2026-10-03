@@ -16,7 +16,7 @@ import {
   type BridgeEvent,
   type DeviceInfo,
   type RpcRequest,
-} from '@agentic/bridge';
+} from '@actable/bridge';
 import { createDeviceDirectory, type ConnectedDevice } from './device-directory';
 import { createForwardedCalls } from './forwarded-calls';
 

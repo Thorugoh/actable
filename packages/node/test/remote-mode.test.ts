@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { connectRelay, startAppBridge, type BridgeEvent, type RelayClient } from '@agentic/bridge';
-import type { Confirmer } from '@agentic/core';
+import { connectRelay, startAppBridge, type BridgeEvent, type RelayClient } from '@actable/bridge';
+import type { Confirmer } from '@actable/core';
 import { startRelay } from '../src';
 import { counterRuntime } from './support/counter-app';
 

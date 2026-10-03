@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
-import { DEFAULT_RELAY_PORT, startAppBridge, type BridgeStatus } from '@agentic/bridge';
-import type { Runtime } from '@agentic/core';
+import { DEFAULT_RELAY_PORT, startAppBridge, type BridgeStatus } from '@actable/bridge';
+import type { Runtime } from '@actable/core';
 
 export type DevBridgeOptions = {
   /** How the CLI picks this app (`--device <name>`). */

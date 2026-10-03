@@ -1,4 +1,4 @@
-import { currentRoute, type Runtime } from '@agentic/core';
+import { currentRoute, type Runtime } from '@actable/core';
 import type { BridgeEvent } from '../protocol/bridge-events';
 
 /** Turns runtime activity (every dispatch and navigation) into bridge events. Returns an unsubscribe. */

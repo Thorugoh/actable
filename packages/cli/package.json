@@ -1,6 +1,7 @@
 {
-  "name": "@agentic/cli",
+  "name": "@actable/cli",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
   "description": "Builds a CLI for any app on the runtime: run actions, inspect screens, replay scenarios, drive the live app.",
   "type": "module",
@@ -9,9 +10,9 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@agentic/bridge": "*",
-    "@agentic/core": "*",
-    "@agentic/node": "*",
+    "@actable/bridge": "*",
+    "@actable/core": "*",
+    "@actable/node": "*",
     "commander": "^15.0.0"
   }
 }

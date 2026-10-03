@@ -86,7 +86,7 @@ Each milestone ends with a demo command that anyone (human or agent) can run.
 - ✅ `todo --remote run-script scenarios/happy-path.jsonl` runs **the same scenario** on the simulator. The UI updates live and a screenshot is saved.
 
 ### M5: User agents via MCP (1.5 days)
-- `@agentic/mcp` (plus a thin `examples/todo/mcp`): tools generated from the registry. Two modes: `--local` (shared JSON file) and `--remote` (bridge to the phone).
+- `@actable/mcp` (plus a thin `examples/todo/mcp`): tools generated from the registry. Two modes: `--local` (shared JSON file) and `--remote` (bridge to the phone).
 - Policy: `origin: agent:mcp`. `todo.delete` either triggers a `ConfirmSheet` on the device (remote) or returns `confirmation_required` (local).
 - ✅ **Headline demo:**
   1. The app is open on the simulator and the MCP server is connected in remote mode.

@@ -1,14 +1,15 @@
 {
   "name": "@todo/cli",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
-  "description": "The `todo` CLI: @agentic/cli configured with the todo domain.",
+  "description": "The `todo` CLI: @actable/cli configured with the todo domain.",
   "type": "module",
   "bin": {
     "todo": "./bin/todo.js"
   },
   "dependencies": {
-    "@agentic/cli": "*",
+    "@actable/cli": "*",
     "@todo/domain": "*",
     "tsx": "^4.23.15"
   }

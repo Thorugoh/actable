@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { actionsUsedBy, parseScenario, runScenario } from '@agentic/core';
+import { actionsUsedBy, parseScenario, runScenario } from '@actable/core';
 import { makeTodoRuntime } from './make-todo-runtime';
 
 const scenarioDirectory = join(import.meta.dirname, '../../scenarios');

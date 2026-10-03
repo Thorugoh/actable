@@ -1,4 +1,4 @@
-import type { RpcId } from '@agentic/bridge';
+import type { RpcId } from '@actable/bridge';
 
 type ForwardedCall<TClient> = { client: TClient; clientRequestId: RpcId; device: string; timer: ReturnType<typeof setTimeout> };
 

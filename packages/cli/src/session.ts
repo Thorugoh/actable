@@ -1,4 +1,4 @@
-import type { RelayClient } from '@agentic/bridge';
+import type { RelayClient } from '@actable/bridge';
 import type { CliConfig, CliIO } from './cli-config';
 import type { GlobalOptions } from './global-options';
 import { createPrinter } from './output/printer';

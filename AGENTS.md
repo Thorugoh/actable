@@ -17,11 +17,11 @@ Lint enforces this. These packages can't import React, React Native, Expo or Nod
 
 | Path | What |
 |---|---|
-| `packages/core` | `@agentic/core`, the runtime. `runtime/` (createRuntime, app definition, persistence), `dispatch/` (pipeline and its `steps/`), `actions/`, `screens/`, `navigation/`, `journal/`, `built-in-actions/`, `scenarios/`, `adapters/` |
-| `packages/bridge` | `@agentic/bridge`. Remote-mode protocol, app host and client (platform-free) |
-| `packages/node` | `@agentic/node`. File storage, random ids, and the relay server |
-| `packages/cli` | `@agentic/cli`. `runCli(config)`: one file per command in `commands/`, local/remote `targets/` |
-| `packages/react-native` | `@agentic/react-native`. `RuntimeProvider`, hooks, `useNavigationSync`, confirmation queue, dev bridge; Expo adapters at `/expo` |
+| `packages/core` | `@actable/core`, the runtime. `runtime/` (createRuntime, app definition, persistence), `dispatch/` (pipeline and its `steps/`), `actions/`, `screens/`, `navigation/`, `journal/`, `built-in-actions/`, `scenarios/`, `adapters/` |
+| `packages/bridge` | `@actable/bridge`. Remote-mode protocol, app host and client (platform-free) |
+| `packages/node` | `@actable/node`. File storage, random ids, and the relay server |
+| `packages/cli` | `@actable/cli`. `runCli(config)`: one file per command in `commands/`, local/remote `targets/` |
+| `packages/react-native` | `@actable/react-native`. `RuntimeProvider`, hooks, `useNavigationSync`, confirmation queue, dev bridge; Expo adapters at `/expo` |
 | `examples/todo/domain` | `@todo/domain`. Todo data (`model/`), `routes.ts`, `actions/` (one per file), `screens/`, `fixtures.ts`, `todo-app.ts` |
 | `examples/todo/cli` | `@todo/cli`. The `todo` binary: `todo-cli.ts` is its whole config |
 | `examples/todo/mobile` | `@todo/mobile`. The Expo app. See `examples/todo/mobile/AGENTS.md` |
@@ -92,7 +92,7 @@ Changing the **framework** (`packages/*`) follows the same loop. Test with the t
 - **`origin`, `confirmed`, `interactive` and `uiStrict` come from the shell** (a CLI flag, the UI, the MCP host), never from an agent's tool input.
 - **Scripts never wait on a human.** Scenario steps dispatch with `interactive: false`, so they get `confirmation_required` instead of a sheet on the device.
 - **Strict UI mode rejects anything the current screen doesn't offer** with `not_on_screen`. Reads and `harness` actions (`state.load`, `nav.reset`) are exempt. `happy-path.jsonl` must keep passing in strict mode.
-- **The runtime's navigation stack is the source of truth.** React Navigation route keys are minted per visit (`@agentic/react-native/navigation/route-keys.ts`), and resets keep the navigator key.
+- **The runtime's navigation stack is the source of truth.** React Navigation route keys are minted per visit (`@actable/react-native/navigation/route-keys.ts`), and resets keep the navigator key.
 - **`--remote` is a plain flag.** Pick a device with `--device <name>`, because an optional flag value would swallow the next command.
 - **Changing the stored data shape needs a migration** (`withMigration`), so existing users keep their data.
 - **Run `npm install` before `npx todo`.** If the workspace bin isn't linked, npx fetches an unrelated public `todo` package.

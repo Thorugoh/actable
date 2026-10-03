@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import type { DispatchFailure } from '@agentic/core';
+import type { DispatchFailure } from '@actable/core';
 import { useRuntime } from './use-runtime';
 
 /**

@@ -1,4 +1,4 @@
-import type { DispatchResult } from '@agentic/core';
+import type { DispatchResult } from '@actable/core';
 import type { CliIO } from '../cli-config';
 
 /** Writes results: pretty JSON for humans, one compact JSON document with --json. */

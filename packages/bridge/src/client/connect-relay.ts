@@ -1,4 +1,4 @@
-import type { ActionInfo, DispatchMeta, DispatchResult, Inspection } from '@agentic/core';
+import type { ActionInfo, DispatchMeta, DispatchResult, Inspection } from '@actable/core';
 import type { BridgeEvent } from '../protocol/bridge-events';
 import { CLOSE_UNAUTHORIZED, EVENT_METHOD, type DeviceInfo, type Screenshot } from '../protocol/bridge-protocol';
 import { isNotification, isResponse, parseMessage } from '../protocol/json-rpc';

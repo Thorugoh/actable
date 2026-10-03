@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
-import type { Storage } from '@agentic/core';
+import type { Storage } from '@actable/core';
 
 /** The whole state as one JSON file, written atomically (temp file + rename). */
 export function jsonFileStorage(path: string): Storage {

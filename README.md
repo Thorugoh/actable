@@ -1,6 +1,8 @@
-# rn-arch-agent
+# Actable
 
-An **agent-addressable app architecture** for React Native, and a todo app built on it. Humans and AI agents use the same app through the same capability surface:
+**Make your React Native app usable by people and AI agents alike.**
+
+Actable is an agent-addressable app architecture for React Native, plus a todo app built on it. Everything an app can do becomes an **action**, so anyone can act on it. Humans and AI agents use the same app through the same capability surface:
 
 - a person taps the UI,
 - a coding agent runs and tests the app from a CLI, with or without a simulator,
@@ -12,17 +14,23 @@ It is based on Shopify Engineering's [*"Back to native"*](https://shopify.engine
 - a CLI that can inspect the app, navigate and perform actions without touching the UI,
 - a **remote mode** that drives the running app on a simulator with the same commands.
 
-> Status: M0–M4 done, restructured into reusable packages. Next: M5, MCP for user agents.
+> **Status: experimental (0.x).** The architecture works end to end (headless runtime, CLI, Expo app, remote mode), but the APIs will change and nothing is published to npm yet.
+>
+> Known limitations:
+> - Actions are synchronous and local, with no backend or async support yet.
+> - Navigation sync supports React Navigation's stack only.
+> - It has only been tested under Expo.
+> - MCP for user agents is next.
 
 ## Repository layout
 
 ```
 packages/                 The architecture: reusable, knows nothing about todos
-  core/                   @agentic/core          runtime: actions, dispatch pipeline, screens, navigation, journal/undo, scenarios
-  bridge/                 @agentic/bridge        remote-mode protocol, app host and client (platform-free)
-  node/                   @agentic/node          Node adapters (file storage, ids) and the relay server
-  cli/                    @agentic/cli           builds a CLI for any app: runCli({ name, app })
-  react-native/           @agentic/react-native  provider, hooks, navigation sync, confirmations, dev bridge, Expo adapters
+  core/                   @actable/core          runtime: actions, dispatch pipeline, screens, navigation, journal/undo, scenarios
+  bridge/                 @actable/bridge        remote-mode protocol, app host and client (platform-free)
+  node/                   @actable/node          Node adapters (file storage, ids) and the relay server
+  cli/                    @actable/cli           builds a CLI for any app: runCli({ name, app })
+  react-native/           @actable/react-native  provider, hooks, navigation sync, confirmations, dev bridge, Expo adapters
 
 examples/todo/            The POC app built on it
   domain/                 @todo/domain           data, actions, screens, fixtures (pure TypeScript)
@@ -106,7 +114,7 @@ The todo example is the reference. `examples/todo/domain` is about 30 small file
 | M2 CLI | `inspect`, `run`, `run-script`, scenarios in CI | ✅ |
 | M3 Mobile shell | Expo app rendering view models, navigation sync, SQLite, Activity | ✅ |
 | M4 Remote mode | Relay, `--remote`, `watch`, `screenshot`, approval on the device | ✅ |
-| — Restructure | Reusable `@agentic/*` packages and the todo app as an example | ✅ |
+| — Restructure | Reusable `@actable/*` packages and the todo app as an example | ✅ |
 | M5 MCP | Agent tools generated from actions; the headline demo | next |
 | M6 Stretch | In-app assistant using the same actions | — |
 
@@ -115,3 +123,7 @@ The todo example is the reference. `examples/todo/domain` is about 30 small file
 1. The todos appear live.
 2. The delete asks for approval on the phone.
 3. Activity shows "Claude …" with Undo.
+
+## License
+
+[MIT](LICENSE) © Victor Hugo

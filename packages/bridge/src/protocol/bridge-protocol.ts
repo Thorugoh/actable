@@ -1,4 +1,4 @@
-import type { ActionInfo, DispatchMeta, DispatchResult, Inspection } from '@agentic/core';
+import type { ActionInfo, DispatchMeta, DispatchResult, Inspection } from '@actable/core';
 
 /**
  * Remote mode:

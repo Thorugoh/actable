@@ -1,4 +1,4 @@
-import { ActionError } from '@agentic/core';
+import { ActionError } from '@actable/core';
 import { z } from 'zod';
 import { defineAction } from '../../kit';
 import { TodoSchema } from '../../model/todo';

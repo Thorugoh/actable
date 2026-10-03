@@ -6,4 +6,4 @@ export { useDispatch } from './hooks/use-dispatch';
 export { useNavigationSync } from './navigation/use-navigation-sync';
 export { createConfirmationQueue } from './confirmation/confirmation-queue';
 export { useDevBridge, defaultRelayUrl, type DevBridgeOptions } from './dev-bridge/use-dev-bridge';
-// Expo adapters: import from "@agentic/react-native/expo".
+// Expo adapters: import from "@actable/react-native/expo".

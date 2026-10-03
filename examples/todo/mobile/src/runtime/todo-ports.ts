@@ -1,6 +1,6 @@
-import { systemClock, withMigration, type Ports } from '@agentic/core';
-import { createConfirmationQueue } from '@agentic/react-native';
-import { expoRandomIds, expoSqliteStorage } from '@agentic/react-native/expo';
+import { systemClock, withMigration, type Ports } from '@actable/core';
+import { createConfirmationQueue } from '@actable/react-native';
+import { expoRandomIds, expoSqliteStorage } from '@actable/react-native/expo';
 import { migrateStoredState } from './migrate-stored-state';
 
 /** Agent requests that need the user's approval queue here; <ConfirmationSheet> shows them. */

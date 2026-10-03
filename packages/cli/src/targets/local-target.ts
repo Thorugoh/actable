@@ -1,6 +1,6 @@
 import { resolve } from 'node:path';
-import { createRuntime, freshState, memoryStorage, systemClock, type Storage } from '@agentic/core';
-import { jsonFileStorage, randomIds } from '@agentic/node';
+import { createRuntime, freshState, memoryStorage, systemClock, type Storage } from '@actable/core';
+import { jsonFileStorage, randomIds } from '@actable/node';
 import { defaultDataFile, type CliConfig, type CliIO } from '../cli-config';
 import type { GlobalOptions } from '../global-options';
 import { terminalConfirmer } from '../input/terminal-confirmer';

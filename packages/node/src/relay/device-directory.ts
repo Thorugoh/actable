@@ -1,4 +1,4 @@
-import { RpcErrorCodes, type DeviceInfo } from '@agentic/bridge';
+import { RpcErrorCodes, type DeviceInfo } from '@actable/bridge';
 import type { WebSocket } from 'ws';
 
 export type ConnectedDevice = DeviceInfo & { socket: WebSocket };

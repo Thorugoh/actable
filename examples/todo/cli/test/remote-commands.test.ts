@@ -2,9 +2,9 @@ import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { startAppBridge } from '@agentic/bridge';
-import { createRuntime, fixedClock, freshState, memoryStorage, sequentialIds, type Runtime } from '@agentic/core';
-import { startRelay, type Relay } from '@agentic/node';
+import { startAppBridge } from '@actable/bridge';
+import { createRuntime, fixedClock, freshState, memoryStorage, sequentialIds, type Runtime } from '@actable/core';
+import { startRelay, type Relay } from '@actable/node';
 import { todoApp, todoFixtures, type TodoData, type TodoRoute } from '@todo/domain';
 import { runTodoCli, scenarioFile } from './run-todo-cli';
 

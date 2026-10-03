@@ -1,5 +1,5 @@
 import { Pressable, ScrollView, Text } from 'react-native';
-import { useViewModel } from '@agentic/react-native';
+import { useViewModel } from '@actable/react-native';
 import type { TodoViewModel } from '@todo/domain';
 import { EmptyState } from '../../components/EmptyState';
 import { sharedStyles } from '../../components/shared-styles';

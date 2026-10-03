@@ -1,4 +1,4 @@
-import { ActionError } from '@agentic/core';
+import { ActionError } from '@actable/core';
 import type { List } from '../model/list';
 import type { Todo } from '../model/todo';
 import type { TodoData } from '../model/todo-data';

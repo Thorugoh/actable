@@ -1,4 +1,4 @@
-import type { AnyAppDefinition } from '@agentic/core';
+import type { AnyAppDefinition } from '@actable/core';
 
 /** What an app provides to get a CLI: `runCli({ name: 'todo', app: todoApp }, argv, io)`. */
 export type CliConfig = {

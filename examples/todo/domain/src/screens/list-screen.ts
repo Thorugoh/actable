@@ -1,4 +1,4 @@
-import { allowIf, type ViewModelContext } from '@agentic/core';
+import { allowIf, type ViewModelContext } from '@actable/core';
 import { defineScreen } from '../kit';
 import type { TodoData } from '../model/todo-data';
 import { countTodos, todosInList } from '../queries/todos-in-list';

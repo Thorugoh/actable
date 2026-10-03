@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import type { ConfirmationRequest, Confirmer } from '@agentic/core';
+import type { ConfirmationRequest, Confirmer } from '@actable/core';
 
 type PendingConfirmation = ConfirmationRequest & { resolve: (approved: boolean) => void };
 

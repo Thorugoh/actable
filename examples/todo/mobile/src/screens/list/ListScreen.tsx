@@ -2,7 +2,7 @@ import { useLayoutEffect } from 'react';
 import { Text, View } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useViewModel } from '@agentic/react-native';
+import { useViewModel } from '@actable/react-native';
 import type { Filter, ListViewModel } from '@todo/domain';
 import { EmptyState } from '../../components/EmptyState';
 import { SegmentedControl } from '../../components/SegmentedControl';

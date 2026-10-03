@@ -1,7 +1,7 @@
 import { DarkTheme, DefaultTheme, NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useColorScheme } from 'react-native';
-import { useNavigationSync } from '@agentic/react-native';
+import { useNavigationSync } from '@actable/react-native';
 import { ActivityScreen } from '../screens/activity/ActivityScreen';
 import { ListScreen } from '../screens/list/ListScreen';
 import { ListsScreen } from '../screens/lists/ListsScreen';

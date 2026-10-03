@@ -1,4 +1,4 @@
-import { routeParams, sameRoute, type AnyRoute } from '@agentic/core';
+import { routeParams, sameRoute, type AnyRoute } from '@actable/core';
 
 /**
  * React Navigation needs a unique key per route *visit* (it remembers the keys of dismissed

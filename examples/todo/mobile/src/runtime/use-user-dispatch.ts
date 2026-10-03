@@ -1,6 +1,6 @@
 import { Alert } from 'react-native';
-import type { DispatchFailure } from '@agentic/core';
-import { useDispatch } from '@agentic/react-native';
+import type { DispatchFailure } from '@actable/core';
+import { useDispatch } from '@actable/react-native';
 
 const showFailure = (failure: DispatchFailure) => Alert.alert('Could not do that', failure.message);
 

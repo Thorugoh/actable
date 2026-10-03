@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
-import { useViewModel } from '@agentic/react-native';
+import { useViewModel } from '@actable/react-native';
 import type { ActivityViewModel } from '@todo/domain';
 import { EmptyState } from '../../components/EmptyState';
 import { sharedStyles } from '../../components/shared-styles';

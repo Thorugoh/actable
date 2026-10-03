@@ -1,15 +1,16 @@
 {
   "name": "@todo/domain",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
-  "description": "The todo app's domain: data, actions, screens and fixtures, defined with @agentic/core.",
+  "description": "The todo app's domain: data, actions, screens and fixtures, defined with @actable/core.",
   "type": "module",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@agentic/core": "*",
+    "@actable/core": "*",
     "zod": "^4.6.5"
   }
 }

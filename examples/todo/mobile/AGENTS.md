@@ -25,7 +25,7 @@ Run lint and typecheck before declaring any task done.
 
 ## Architecture (read the root `AGENTS.md` first)
 
-This app is a **thin shell** over the todo domain (`@todo/domain`) and the runtime (`@agentic/core`). All state, rules and navigation live there and run headlessly in Node. This app only renders and dispatches, using `@agentic/react-native`.
+This app is a **thin shell** over the todo domain (`@todo/domain`) and the runtime (`@actable/core`). All state, rules and navigation live there and run headlessly in Node. This app only renders and dispatches, using `@actable/react-native`.
 
 ```
 src/
@@ -44,7 +44,7 @@ src/
 
 ## Navigation & Routing (overrides the Expo template default)
 
-- **Do not use Expo Router here.** The runtime owns navigation (driven by `nav.*` actions), so file-based routing would be a second source of truth. `TodoNavigator` renders the runtime's stack with React Navigation's native stack (which Expo Router uses internally), synced by `useNavigationSync` from `@agentic/react-native`.
+- **Do not use Expo Router here.** The runtime owns navigation (driven by `nav.*` actions), so file-based routing would be a second source of truth. `TodoNavigator` renders the runtime's stack with React Navigation's native stack (which Expo Router uses internally), synced by `useNavigationSync` from `@actable/react-native`.
 - **Never call `navigation.navigate`.** Dispatch `nav.push` or `nav.back`. Native back gestures are synced into the runtime automatically.
 - **To add a screen:**
   1. Add the route to `examples/todo/domain/src/routes.ts`.

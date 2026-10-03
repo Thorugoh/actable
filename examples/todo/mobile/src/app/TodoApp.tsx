@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { RuntimeProvider } from '@agentic/react-native';
+import { RuntimeProvider } from '@actable/react-native';
 import { todoApp } from '@todo/domain';
 import { ConfirmationSheet } from '../components/ConfirmationSheet';
 import { DevBridge } from '../dev/DevBridge';

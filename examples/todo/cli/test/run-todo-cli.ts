@@ -1,4 +1,4 @@
-import { runCli, type CliIO } from '@agentic/cli';
+import { runCli, type CliIO } from '@actable/cli';
 import { todoCli } from '../src/todo-cli';
 
 /** Runs the todo CLI in-process and captures its output. */

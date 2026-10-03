@@ -1,4 +1,4 @@
-import { connectRelay, type RelayClient } from '@agentic/bridge';
+import { connectRelay, type RelayClient } from '@actable/bridge';
 import type { GlobalOptions } from '../global-options';
 import type { Target } from './target';
 

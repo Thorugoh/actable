@@ -4,7 +4,7 @@
 > Inspired by: Shopify Engineering, *"Back to native"* (2026-09-10)
 >
 > This is the original proposal. The implementation became reusable packages:
-> - `@agentic/core`, `bridge`, `node`, `cli` and `react-native` in `packages/`
+> - `@actable/core`, `bridge`, `node`, `cli` and `react-native` in `packages/`
 > - the todo app as an example in `examples/todo/`
 >
 > See [`README.md`](../README.md) and [`adding-to-an-app.md`](adding-to-an-app.md). Code samples below follow the implemented API.
@@ -81,7 +81,7 @@ three kinds of consumer:
 - The state is serializable. The whole app state can be dumped, snapshotted or restored as JSON. Agents rely on this, and so do fixtures.
 
 ```ts
-// @agentic/core: runtime/runtime-state.ts (app data + navigation + journal)
+// @actable/core: runtime/runtime-state.ts (app data + navigation + journal)
 export type AppState = {
   todos: Record<TodoId, Todo>;
   lists: Record<ListId, List>;
@@ -265,7 +265,7 @@ The same registry, exposed to agents acting **for the user**:
 
 | Channel | How it works | POC? |
 |---|---|---|
-| **MCP server** (`@agentic/mcp`, M5) | Serves registry actions as MCP tools. Runs locally (headless, on the same storage) or in remote mode against the phone. Later, as a hosted server against a sync backend. | ✅ |
+| **MCP server** (`@actable/mcp`, M5) | Serves registry actions as MCP tools. Runs locally (headless, on the same storage) or in remote mode against the phone. Later, as a hosted server against a sync backend. | ✅ |
 | **In-app assistant** | A chat screen. The LLM gets registry tools filtered by policy, and each tool call goes through `dispatch(..., { origin: 'agent:assistant' })`. The user watches the UI change live. | stretch |
 | **OS intents** (Siri App Intents / Android App Actions) | A native module maps a curated subset (`todo.create`, `todo.list`) to intents that call into the JS registry. | later |
 
@@ -279,11 +279,11 @@ The same registry, exposed to agents acting **for the user**:
 
 ```
 packages/                 # the architecture; reusable, knows nothing about todos
-├─ core/                  # @agentic/core: runtime, dispatch pipeline, screens, navigation, journal, scenarios
-├─ bridge/                # @agentic/bridge: remote-mode protocol, app host + client (platform-free)
-├─ node/                  # @agentic/node: file storage, ids, relay server
-├─ cli/                   # @agentic/cli: runCli({ name, app }) gives any app its CLI
-└─ react-native/          # @agentic/react-native: provider, hooks, navigation sync, confirmations, dev bridge
+├─ core/                  # @actable/core: runtime, dispatch pipeline, screens, navigation, journal, scenarios
+├─ bridge/                # @actable/bridge: remote-mode protocol, app host + client (platform-free)
+├─ node/                  # @actable/node: file storage, ids, relay server
+├─ cli/                   # @actable/cli: runCli({ name, app }) gives any app its CLI
+└─ react-native/          # @actable/react-native: provider, hooks, navigation sync, confirmations, dev bridge
 examples/todo/            # the POC built on it
 ├─ domain/                # @todo/domain: data, actions, screens, fixtures (pure TS)
 ├─ cli/                   # @todo/cli: the `todo` binary (one config object)

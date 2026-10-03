@@ -1,10 +1,11 @@
 {
   "name": "@todo/mobile",
   "version": "1.0.0",
+  "license": "MIT",
   "main": "index.ts",
   "dependencies": {
-    "@agentic/core": "*",
-    "@agentic/react-native": "*",
+    "@actable/core": "*",
+    "@actable/react-native": "*",
     "@react-navigation/native": "^7.4.1",
     "@react-navigation/native-stack": "^7.19.2",
     "@shopify/flash-list": "2.0.2",

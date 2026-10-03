@@ -1,4 +1,4 @@
-import type { AnyRoute } from '@agentic/core';
+import type { AnyRoute } from '@actable/core';
 
 /** What the live feed (`todo watch`, relay logs) shows. */
 export type BridgeEvent = DispatchedEvent | NavigatedEvent | DeviceEvent;

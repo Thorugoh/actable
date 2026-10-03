@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import type { Command } from 'commander';
-import { parseScenario, runScenario, type StepReport } from '@agentic/core';
+import { parseScenario, runScenario, type StepReport } from '@actable/core';
 import { globalOptionsOf } from '../global-options';
 import { parseDelay } from '../input/parse-delay';
 import { parseOrigin } from '../input/parse-origin';

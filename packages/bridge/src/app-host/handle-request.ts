@@ -1,4 +1,4 @@
-import type { DispatchMeta, Runtime } from '@agentic/core';
+import type { DispatchMeta, Runtime } from '@actable/core';
 import { errorResponse, resultResponse, type RpcRequest, type RpcResponse } from '../protocol/json-rpc';
 import { RpcErrorCodes } from '../protocol/bridge-protocol';
 

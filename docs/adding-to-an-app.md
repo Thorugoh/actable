@@ -10,9 +10,9 @@ This guide takes you from nothing to an app that humans, coding agents and user 
 
 ```
 my-app/
-  domain/     @my/domain   → depends on @agentic/core
-  cli/        @my/cli      → depends on @agentic/cli + @my/domain
-  mobile/     @my/mobile   → depends on @agentic/react-native + @my/domain
+  domain/     @my/domain   → depends on @actable/core
+  cli/        @my/cli      → depends on @actable/cli + @my/domain
+  mobile/     @my/mobile   → depends on @actable/react-native + @my/domain
 ```
 
 ## 1. The domain
@@ -141,7 +141,7 @@ Add the domain to the headless lint guardrail in `eslint.config.mjs`, so it can 
 
 ```ts
 // cli/src/main.ts
-import { processIO, runCli } from '@agentic/cli';
+import { processIO, runCli } from '@actable/cli';
 import { notesApp } from '@my/domain';
 
 process.exitCode = await runCli({ name: 'notes', app: notesApp }, process.argv.slice(2), processIO());
@@ -175,7 +175,7 @@ Ports are how the runtime reaches the device. Create them once, at module level:
 // mobile/src/runtime/ports.ts
 export const confirmations = createConfirmationQueue();
 export const ports: Ports = {
-  storage: expoSqliteStorage('notes-state-v1'),        // from '@agentic/react-native/expo'
+  storage: expoSqliteStorage('notes-state-v1'),        // from '@actable/react-native/expo'
   clock: systemClock(),
   ids: expoRandomIds(),
   confirm: confirmations.confirm,                      // agents' destructive actions ask the user
@@ -251,7 +251,7 @@ notes --remote run-script scenarios/happy-path.jsonl --delay 1000
 notes watch
 ```
 
-For physical devices, run `notes serve --host 0.0.0.0 --token <secret>`. Then set `EXPO_PUBLIC_AGENTIC_RELAY_URL` and `EXPO_PUBLIC_AGENTIC_RELAY_TOKEN` in the app.
+For physical devices, run `notes serve --host 0.0.0.0 --token <secret>`. Then set `EXPO_PUBLIC_ACTABLE_RELAY_URL` and `EXPO_PUBLIC_ACTABLE_RELAY_TOKEN` in the app.
 
 ## Checklist
 

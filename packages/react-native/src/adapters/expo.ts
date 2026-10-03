@@ -1,6 +1,6 @@
 import { randomUUID } from 'expo-crypto';
 import KeyValueStore from 'expo-sqlite/kv-store';
-import type { IdGenerator, Storage } from '@agentic/core';
+import type { IdGenerator, Storage } from '@actable/core';
 
 /** The whole runtime state as one row in SQLite (Expo). */
 export function expoSqliteStorage(key: string): Storage {

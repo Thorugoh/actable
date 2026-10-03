@@ -1,6 +1,7 @@
 {
-  "name": "@agentic/react-native",
+  "name": "@actable/react-native",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
   "description": "React Native bindings: runtime provider, view-model hooks, navigation sync, confirmation queue, dev bridge, Expo adapters.",
   "type": "module",
@@ -13,8 +14,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@agentic/bridge": "*",
-    "@agentic/core": "*"
+    "@actable/bridge": "*",
+    "@actable/core": "*"
   },
   "peerDependencies": {
     "react": "*",

@@ -1,4 +1,4 @@
-import { OriginSchema, type Origin } from '@agentic/core';
+import { OriginSchema, type Origin } from '@actable/core';
 
 export function parseOrigin(raw: string): Origin {
   const parsed = OriginSchema.safeParse(raw);

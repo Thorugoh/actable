@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createAppKit, createRuntime, fixedClock, memoryStorage, sequentialIds, type Confirmer } from '@agentic/core';
+import { createAppKit, createRuntime, fixedClock, memoryStorage, sequentialIds, type Confirmer } from '@actable/core';
 
 /** A minimal app for exercising remote mode. */
 const CounterData = z.object({ count: z.number() });

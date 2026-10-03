@@ -1,5 +1,5 @@
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
-import { describeOrigin } from '@agentic/core';
+import { describeOrigin } from '@actable/core';
 import { confirmations } from '../runtime/todo-ports';
 import { useTheme } from '../theme/theme';
 

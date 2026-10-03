@@ -9,7 +9,7 @@
   "scripts": {
     "todo": "tsx examples/todo/cli/src/main.ts",
     "test": "vitest run",
-    "typecheck": "tsc -p tsconfig.json && npm run typecheck -w @agentic/react-native && npm run typecheck -w @todo/mobile",
+    "typecheck": "tsc -p tsconfig.json && npm run typecheck -w @actable/react-native && npm run typecheck -w @todo/mobile",
     "lint": "eslint .",
     "check": "npm run lint && npm run typecheck && npm test",
     "ios": "npm run ios -w @todo/mobile",
@@ -24,5 +24,6 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.70.1",
     "vitest": "^5.0.1"
-  }
+  },
+  "license": "MIT"
 }

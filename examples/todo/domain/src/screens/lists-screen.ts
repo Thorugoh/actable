@@ -1,4 +1,4 @@
-import { allowIf } from '@agentic/core';
+import { allowIf } from '@actable/core';
 import { defineScreen } from '../kit';
 import { listsWithCounts } from '../queries/todos-in-list';
 

@@ -1,5 +1,5 @@
-import type { BridgeEvent } from '@agentic/bridge';
-import { describeOrigin } from '@agentic/core';
+import type { BridgeEvent } from '@actable/bridge';
+import { describeOrigin } from '@actable/core';
 
 const timeOf = (iso: string) => iso.slice(11, 19);
 

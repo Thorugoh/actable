@@ -1,4 +1,4 @@
-import { createAppKit } from '@agentic/core';
+import { createAppKit } from '@actable/core';
 import type { TodoData } from './model/todo-data';
 import type { TodoRoute } from './routes';
 

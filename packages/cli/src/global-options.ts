@@ -1,5 +1,5 @@
 import { Command, Option } from 'commander';
-import { DEFAULT_RELAY_URL } from '@agentic/bridge';
+import { DEFAULT_RELAY_URL } from '@actable/bridge';
 import { defaultDataFile, type CliConfig } from './cli-config';
 
 /** Options every command understands. */
@@ -27,9 +27,9 @@ export function addGlobalOptions(program: Command, config: CliConfig): Command {
     .option('--as <origin>', 'who is acting: user | system | agent:<id>', 'user')
     .option('--ui-strict', 'only allow what a user could do from the current screen (navigate first)')
     .option('--remote', 'run against the live app through the relay (see "serve")')
-    .addOption(new Option('--device <name>', 'which connected app to use (name or prefix), when several are connected').env('AGENTIC_DEVICE'))
-    .addOption(new Option('--relay <url>', 'relay URL').env('AGENTIC_RELAY_URL').default(DEFAULT_RELAY_URL))
-    .addOption(new Option('--token <token>', 'relay pairing token').env('AGENTIC_RELAY_TOKEN'));
+    .addOption(new Option('--device <name>', 'which connected app to use (name or prefix), when several are connected').env('ACTABLE_DEVICE'))
+    .addOption(new Option('--relay <url>', 'relay URL').env('ACTABLE_RELAY_URL').default(DEFAULT_RELAY_URL))
+    .addOption(new Option('--token <token>', 'relay pairing token').env('ACTABLE_RELAY_TOKEN'));
 }
 
 export function globalOptionsOf(command: Command): GlobalOptions {

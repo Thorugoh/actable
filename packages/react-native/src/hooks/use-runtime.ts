@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import type { Runtime } from '@agentic/core';
+import type { Runtime } from '@actable/core';
 import { RuntimeContext } from '../runtime-provider';
 
 export function useRuntime(): Runtime {

@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import type { AnyRoute } from '@agentic/core';
+import type { AnyRoute } from '@actable/core';
 import { useRuntime } from './use-runtime';
 
 /**
