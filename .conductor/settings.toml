@@ -1,0 +1,31 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+# npm workspaces (package-lock.json); also links the workspace `todo` bin so `npx todo` works.
+setup = "npm install --no-audit --no-fund"
+# Every workspace drives the same iOS simulator and the relay's fixed port (8765, which the
+# app and `npx todo --remote` assume), so only one workspace's app should run at a time.
+run_mode = "nonconcurrent"
+# Stop a Metro bundler left listening on this workspace's port.
+archive = "[ -n \"$CONDUCTOR_PORT\" ] && lsof -ti tcp:$CONDUCTOR_PORT -sTCP:LISTEN | xargs kill 2>/dev/null; true"
+
+# Relay + Expo on the iOS simulator, so `npx todo --remote …` drives the live app.
+[scripts.run.ios]
+command = "trap 'kill 0' EXIT; npx todo serve & npm run ios -w @todo/mobile -- --port $CONDUCTOR_PORT"
+default = true
+icon = "smartphone"
+available_in = [ "local" ]
+
+# Relay only, for when the app is already running (e.g. launched from Xcode).
+[scripts.run.relay]
+command = "npx todo serve"
+icon = "radio"
+available_in = [ "local" ]
+
+[scripts.run.test]
+command = "npx vitest"
+icon = "test-tube"
+
+[scripts.run.check]
+command = "npm run check"
+icon = "shield-check"
