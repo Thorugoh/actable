@@ -1,5 +1,7 @@
 # Actable
 
+[![CI](https://github.com/Thorugoh/actable/actions/workflows/ci.yml/badge.svg)](https://github.com/Thorugoh/actable/actions/workflows/ci.yml)
+
 **Make your React Native app usable by people and AI agents alike.**
 
 Actable is an agent-addressable app architecture for React Native, plus a todo app built on it. Everything an app can do becomes an **action**, so anyone can act on it. Humans and AI agents use the same app through the same capability surface:
