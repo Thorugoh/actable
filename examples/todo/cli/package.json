@@ -2,6 +2,15 @@
   "name": "@todo/cli",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "examples/todo/cli"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/examples/todo/cli#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "private": true,
   "description": "The `todo` CLI: @actable/cli configured with the todo domain.",
   "type": "module",

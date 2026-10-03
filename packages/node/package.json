@@ -2,6 +2,15 @@
   "name": "@actable/node",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "packages/node"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/packages/node#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "private": true,
   "description": "Node.js adapters (file storage, ids) and the remote-mode relay server.",
   "type": "module",

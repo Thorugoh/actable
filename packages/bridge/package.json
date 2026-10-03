@@ -2,6 +2,15 @@
   "name": "@actable/bridge",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "packages/bridge"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/packages/bridge#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "private": true,
   "description": "Remote mode protocol: lets the CLI and agents drive a running app over WebSocket. Platform-free (runs in React Native and Node).",
   "type": "module",

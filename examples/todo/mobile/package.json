@@ -2,6 +2,15 @@
   "name": "@todo/mobile",
   "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "examples/todo/mobile"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/examples/todo/mobile#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "main": "index.ts",
   "dependencies": {
     "@actable/core": "*",

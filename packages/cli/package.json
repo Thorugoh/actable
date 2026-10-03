@@ -2,6 +2,15 @@
   "name": "@actable/cli",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/packages/cli#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "private": true,
   "description": "Builds a CLI for any app on the runtime: run actions, inspect screens, replay scenarios, drive the live app.",
   "type": "module",

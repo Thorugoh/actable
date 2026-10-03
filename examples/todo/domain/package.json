@@ -2,6 +2,15 @@
   "name": "@todo/domain",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorugoh/actable.git",
+    "directory": "examples/todo/domain"
+  },
+  "homepage": "https://github.com/Thorugoh/actable/tree/main/examples/todo/domain#readme",
+  "bugs": {
+    "url": "https://github.com/Thorugoh/actable/issues"
+  },
   "private": true,
   "description": "The todo app's domain: data, actions, screens and fixtures, defined with @actable/core.",
   "type": "module",
