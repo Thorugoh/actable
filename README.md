@@ -67,6 +67,8 @@ npx todo watch                                  # live feed of every action in t
 npx todo screenshot shot.png
 ```
 
+**Demo:** [watch an agent drive the app](https://youtu.be/Cjz7s1iSn5g) through remote mode.
+
 Run `npm install` before `npx todo`. If the workspace bin isn't linked, npx fetches an unrelated public package with the same name.
 
 ## How it works
